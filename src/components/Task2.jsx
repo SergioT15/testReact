@@ -7,16 +7,16 @@ const Task2 = (props) => {
   const [requestedId, setRequestedId] = useState(null);
 
   const fetchData = () => {
-    fakeRequest(requestedId);
+    setRequestedId(requestedId);
   }
 
   const submitHandler = () => {
-    setRequestedId(idValue);
+    setIdValue(idValue);
     fetchData()
   }
 
   const inputChangeHandler = (ev) => {
-    setIdValue(ev.target.value);
+     setIdValue(ev.target.value);
   }
 
   return (

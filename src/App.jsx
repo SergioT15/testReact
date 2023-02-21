@@ -11,8 +11,8 @@ import Task8 from './components/Task8';
 function App() {
   return (
     <div>
-      <Task1 />
-      {/* <Task2 /> */}
+      {/* <Task1 /> */}
+      <Task2 />
       {/* <Task3 /> */}
       {/* <Task4 /> */}
       {/* <Task5 /> */}
