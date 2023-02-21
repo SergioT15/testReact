@@ -6,9 +6,10 @@ const Task4 = () => {
     <div>
       <ul>
         {fakeList.map((item) => {
+          return (
           <li>
             {item}
-          </li>
+          </li>)
         })}
       </ul>
     </div>
