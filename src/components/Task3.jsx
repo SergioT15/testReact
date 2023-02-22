@@ -1,23 +1,27 @@
-import { useMemo } from 'react';
-import { useRef } from 'react';
-import styles from './Task3.module.scss';
+import { useEffect } from "react";
+import { useRef, useState } from "react";
+import styles from "./Task3.module.scss";
 
 const Task3 = () => {
-
   const elementRef = useRef();
-  
-  const width = useMemo(() => {
+
+  const [width, setWidth] = useState("");
+
+  console.log(elementRef);
+
+  useEffect(() => {
     const elementWidth = elementRef.current.clientWidth;
-    return elementWidth;
-  }, [elementRef])
-  
+
+    setWidth(elementWidth);
+  }, [elementRef]);
+
   const handleButtonClick = () => {
-    if (width >= 100) {
-      elementRef.current.classList.add(styles.blue)
+    if (width <= 100) {
+      elementRef.current.classList.add(styles.blue);
     } else {
-      elementRef.current.classList.add(styles.green)
+      elementRef.current.classList.add(styles.green);
     }
-  }
+  };
 
   return (
     <div>
@@ -26,9 +30,7 @@ const Task3 = () => {
         Box
       </div>
     </div>
-  )
-
-}
-
+  );
+};
 
 export default Task3;
