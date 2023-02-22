@@ -3,16 +3,12 @@ import { useState } from 'react';
 
 
 const Task2 = (props) => {
-  const [idValue, setIdValue] = useState();
-  const [requestedId, setRequestedId] = useState(null);
-
-  const fetchData = () => {
-    setRequestedId(requestedId);
-  }
+  const [idValue, setIdValue] = useState("");
 
   const submitHandler = () => {
     setIdValue(idValue);
-    fetchData()
+    console.log(idValue)
+
   }
 
   const inputChangeHandler = (ev) => {
