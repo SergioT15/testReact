@@ -1,10 +1,10 @@
 import React from "react";
 
 const fakeList = [
-  { id: 14675, color: "red" },
-  { id: 26767, color: "blue" },
-  { id: 3456756, color: "green" },
-  { id: 4567567, color: "tomato" },
+  { color: "red" },
+  { color: "blue" },
+  { color: "green" },
+  { color: "tomato" },
 ];
 
 const Task5 = () => {
@@ -18,9 +18,9 @@ const Task5 = () => {
   return (
     <div>
       <ul>
-        {list.map((item, idx) => {
+        {list.map((item) => {
           return (
-            <ListItem key={item.id} color={item.color}>
+            <ListItem key={item.color} color={item.color}>
               <button onClick={() => removeItemFromList(item.color)}>
                 Remove Item
               </button>
